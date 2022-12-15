@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introduction to Logic</title>
+        <meta name = "viewport" content="width = device-width,initial-scale=1.0">
+        <link rel="icon" type="image/x-png" href="/images/logic_logo.png">
+        <link rel = "stylesheet" href="style_logic_calc.css">
+    </head>
+    <body>
+        <header>
+            <div class = "logo"><a href = "Set_Theory.html"></a></div>
+            <a href="./logic.html">Introduction to Mathematical Logic</a>
+        </header>
+        <div class="lform">
+            <h1 id="ttl">Validity Checker</h1>
+            <div class="in_box">
+                <h3 class = "in">Premises</h3>
+                <form><textarea class ="inp_f" id="prname" name="prname" rows="4" cols="50" 
+                    autocomplete="off">((P or Q) and R)&#13;&#10;(not P)</textarea></form>
+                <h3 class = "in">Conclusions</h3>
+                <form><textarea class ="inp_f" id="cname" name="cname" rows="4" cols="50" 
+                    autocomplete="off">(P and Q)&#13;&#10;(Q)&#13;&#10;(R)</textarea></form>
+                <h3 class = "instr"><strong>Instructions:</strong><br>
+                    <ul>
+                        <li>Enter your logical expressions in respective fields</li>
+                        <li>Use and, or, not, implies, iff for respective operations.</li>
+                        <li>Each sentence is enclosed '()',write only one sentence per line</li>
+                        <li>Place '()' in proper places for correct results</li>
+                    </ul>
+                </h3>
+                <div id="c_btn">Check</div>
+            </div>
+            <div id="result_table"></div>
+            <div id="res_t">
+                <h1>Result<h1>
+            </div>
+        </div> 
+        <footer></footer>
+        <script src = "logic_calc.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+    </body>
+</html>

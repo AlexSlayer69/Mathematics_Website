@@ -1,0 +1,190 @@
+/**{
+    margin: 0px;
+    padding: 0px;
+}*/
+
+body{
+    background-color: #f4f4f4;
+    color: #555555;
+    
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    /*font : weight family size*/
+    line-height: 1.6em;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    color: red;
+}
+a:active{
+    color:green;
+}
+/*a:visited{
+    color: yellow;
+}*/
+
+.clr{
+    clear: both;
+}
+.button{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+}
+
+.button:hover{
+    background-color: red;
+    color:#fff;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    /*margin : top right bottom left*/
+    /*margin: top-bottom left-right*/
+    /*same with padding*/
+}
+
+.box-1{
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    border: 5px red solid;
+    border-bottom-width: 10px;
+    border-top-style: dashed;
+    /*same as margin*/
+    padding: 20px;
+}
+
+.box-1 h1{
+    font-family: Tahoma;
+    font-weight: 800;
+    font-style:italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.box-2{
+    border: 3px #444 dotted;
+    padding: 20px;
+    margin: 20px 0px;
+}
+
+.category{
+    border : 1px #ccc solid;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.category h2{
+    text-align: center;
+}
+
+.category ul{
+    padding: 0px;
+    padding-left: 20px;
+    list-style: square; /*none for no dots*/
+}
+
+.category li{
+    padding-bottom: 6px;
+    border-bottom: 1px dotted #333;
+    list-style-image: url('../images/cloud.png');
+}
+
+h3{
+    color: green; 
+}
+
+.Myform{
+    padding: 20px;
+}
+
+.Myform .form-group{
+    padding-bottom: 15px;
+}
+
+.Myform label{
+    display: block;
+}
+
+.Myform input[type = "text"], .Myform textarea{
+    padding: 8px;
+    width: 100%;
+}
+
+.block{
+    float: left;
+    width: 33.3%;
+    border:1px dotted #333;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#main-block{
+    float:left;
+    width: 70%;
+    box-sizing: border-box;
+}
+
+#sidebar{
+    float:right;
+    width:30%;
+    background-color: #333;
+    color: white;
+    paddiing:15px;
+    box-sizing: border-box;
+}
+
+.p-box{
+    position: relative;/*static by default*/
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+    margin-top: 30px;
+    background-image: url('../images/mountain.png');
+    /* background-position: 100px 200px;*/
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.p-box h1{
+    position: absolute; /*uses the closest 
+    parent that is relative or the whole html*/
+    top: 100px; /*from the top*/
+    left: 200px;
+}
+
+.p-box h2{
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+}
+
+.fix-me{
+    position: fixed;
+    top:400px;
+}
+
+.my-list li:first-child{
+    background: red;
+}
+
+.my-list li:last-child{
+    background: blue;
+}
+
+.my-list li:nth-child(3){
+    background: yellowgreen;
+}
+
+.my-list li:nth-child(even){
+    background: gray;
+}

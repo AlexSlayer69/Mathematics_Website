@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introduction to Set Theory</title>
+        <meta name = "viewport" content="width = device-width,initial-scale=1.0">
+        <link rel="icon" type="image/x-jpg" href="/images/Fav.jpg">
+        <link rel = "stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class = "sidebar">
+            <div class="logo_content">
+                <div class="logo">
+                    <div class="logo_image"></div>
+                <div class="logo_name">MATHS</div>    
+                </div>
+                <div id = "menu_image"></div>
+            </div>
+            <ul class="nav_list">
+                <li>
+                    <a href = "#logic_sec">
+                        <div class = "logic_image"></div>
+                        <span class = "name">Mathematical Logic</span>
+                    </a>
+                </li>
+                <li>
+                    <a href = "#">
+                        <div class = "logic_image"></div>
+                    <span class = "name">LOGIC</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href = "#">
+                        <div class = "logic_image"></div>
+                        <span class = "name">LOGIC</span>
+                    </a>
+                </li>
+                <li>
+                    <a href = "#">
+                        <div class = "logic_image"></div>
+                        <span class = "name">LOGIC</span>
+                    </a>
+                </li>
+                <li>
+                    <a href = "#">
+                        <div class = "logic_image"></div>
+                        <span class = "name">LOGIC</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class = "main_content">
+            <div id = "welcome"><h1>Home Content</h1></div>
+            <div class = "section" id = "logic_sec">
+                <a href="logic.html">
+                <div id ="frege"></div>
+                <div id ="logic_text">
+                    <h1>mathematical logic</h1>
+                <p>We Introduce the basis of <em>Mathematical Logic</em><br>
+                   Mathematical logic is the study of formal logic within mathematics.<br>
+                   It can also include uses of logic to characterize correct mathematical 
+                   reasoning or to establish<br><em>Foundations of Mathematics</em></p>
+                </a>
+                </div>
+            </div>
+            <div class = "section">
+                <div id ="frege"></div>
+                <div id ="logic_text"></div>
+            </div>
+            <div class = "section">
+                <div id ="frege"></div>
+                <div id ="logic_text"></div>
+            </div>
+            <div class = "section">
+                <div id ="frege"></div>
+                <div id ="logic_text"></div>
+            </div>
+            <div style="background: #1e2c42; height:50px; width:100% "></div>
+        </div>
+       
+        <script>
+            let menu = document.querySelector("#menu_image");
+            let sidebar = document.querySelector(".sidebar");
+
+            menu.onclick = function(){
+                sidebar.classList.toggle("active");
+            }
+            
+        </script>
+        <script src = "script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Wavehaus_Bold;
+    src: url(./fonts/Graham-Paterson_Wavehaus-typeface/Wavehaus-128Bold.otf);
+}
+@font-face {
+    font-family: Wavehaus_SBold;
+    src: url(./fonts/Graham-Paterson_Wavehaus-typeface/Wavehaus-95SemiBold.otf);
+}
+@font-face {
+    font-family: Wavehaus_Light;
+    src: url(./fonts/Graham-Paterson_Wavehaus-typeface/Wavehaus-42Light.otf);
+}
+@font-face {
+    font-family: Univa-Nova;
+    src: url(./fonts/Univa-Nova-Font-Family/DesktopFonts/OTF/UnivaNova-Light.otf);
+}
+@font-face {
+    font-family: Univa-Nova_Bold;
+    src: url(./fonts/Univa-Nova-Font-Family/DesktopFonts/OTF/UnivaNova-Bold.otf);
+}
+:root{
+--primary : #292929;
+--secondary_2: #6A7175;
+--secondary: #363230;
+}
+
+html{
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 4rem;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+    background: var(--primary);
+    
+}
+
+::-webkit-scrollbar-thumb{
+    background: white;
+}
+
+strong{
+    font-family: Wavehaus_bold;
+}
+
+a{
+    color: var(--primary);
+}
+
+h1{
+    font-size: 4rem;
+    font-family: Wavehaus_Bold;
+}
+
+h2{
+    font-size: 2rem;
+    font-family: Wavehaus_Bold;
+}
+
+h3{
+    font-size: 1.5rem;
+    font-family: Wavehaus_Light;
+}
+
+.hide{
+    display: none;
+}
+
+textarea {
+    resize: none;
+  }
+
+/*Page Contents*/
+/*Header*/
+
+header {
+    position: fixed;
+    display: flex;
+    padding: 0.4em 2em;
+    width: 100%;
+    max-height: 4rem;
+    z-index: 1000;
+    background-color: var(--primary);
+}
+
+header .logo {
+    position: relative;
+    align-self: center;
+    min-width: 3.2em;
+    min-height: 3.2em;
+    background-image: url(./images/logic_logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header .logo a{
+    position: absolute;
+    min-width: 3.2em;
+    min-height: 3.2em;
+}
+
+header  a{
+    align-self: center;
+    padding-left: 1.6rem;
+    color: white;
+    font-family: Wavehaus_Bold;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+/*media queries for header*/
+
+@media screen and (max-width: 1000px) {
+    header .navbar .topic {
+      display: none;
+    }
+  }
+
+@media screen and (max-width: 500px) {
+    header .navbar .content h3 {
+      display: none;
+    }
+    header .navbar .content {
+        min-width: auto;
+        background-color: var(--primary);
+    }
+
+    header .navbar .content .hid img{
+        margin: auto;
+        background-color: white;
+        margin-bottom: 1em;
+    }
+    header .navbar .content .dropdown.dropdown.active{
+    opacity:0.8;
+    background-color: var(--primary);
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:2.7em;
+    padding-top:1em;
+    left:0px;
+    z-index:1000;
+    }
+  } 
+
+.lform{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(15,7.4em);
+    grid-gap:1em 0.5em;
+    padding-top:3em;
+}
+
+.lform h1{
+    display: flex;
+    grid-column-start: 4;
+    grid-column-end: 10;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Wavehaus_bold;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+#ttl{
+    scroll-snap-align: start;
+}
+
+.lform .in_box{
+    display: grid;
+    border-radius: 2em;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 2fr 0.5fr;
+    padding: 2em 4em;
+    gap: 0.5em 0.5em;
+    grid-column: 4/10;
+    grid-row: 2/6;
+    width: 100%;
+    color: white;
+    height: 100%;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    justify-items: center;
+    background: var(--primary);
+}
+
+.lform .in_box .instr{
+    grid-column: 1/3;
+}
+
+.lform .in_box .instr ul li{
+    font-size: 1rem;
+}
+
+.lform .in_box .inp_f{
+    width: 100%;
+    grid-column: 2/3;
+    padding: 1em;
+    font-size: 1em;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    box-sizing: border-box;
+    background: #292929;
+    background: #292929;
+    border: 0;
+    box-shadow: inset 5px 5px 10px #101010,
+            inset -5px -5px 10px #424242;
+}
+
+#c_btn{
+    font-family: Wavehaus_bold;
+    border-radius: 0.5em;
+    font-size: 2em;
+    line-height: 2.5em;
+    margin: 0.5em;
+    padding: 0 2em;
+    grid-column: 1/3;
+    background: linear-gradient(145deg, #2c2c2c, #252525);
+    box-shadow:  10px 10px 19px #1e1e1e,
+             -10px -10px 19px #343434;
+    transition: transform 0.1s,color 0.4s ease,background 0.4s ease,box-shadow 0.4s ease;
+}
+
+#c_btn:active{
+    transform: scale(1.1);
+}
+
+#c_btn:hover{
+    color: var(--primary);
+    background: white;
+    box-shadow: none;
+}
+
+#result_table{
+    display: grid;
+    grid-template-rows: 0.5fr 1fr 2px 1fr;
+    grid-auto-rows: 1fr;
+    font-family: Wavehaus_bold;
+    color: var(--primary);
+    border-radius: 4em;
+    padding: 1em 2em;
+    grid-row: 7/11;
+    grid-column: 3/11;
+    justify-items: center;
+    align-items: center;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow:  50px 50px 100px #c4c4c4,
+             -50px -50px 100px #ffffff;
+             scroll-snap-align: center;
+}
+
+.lform #res_t{
+    display: flex;
+    flex-direction: column;
+    grid-column: 3/11;
+    grid-row: 13/15;
+    font-family: Wavehaus_bold;
+    padding: 1em;
+    line-height: 1.5em;
+    font-size: 1.5em;
+    border-radius: 1em;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow:  20px 20px 60px #d9d9d9,
+             -20px -20px 60px #ffffff;
+             scroll-snap-align: center;
+
+}
+
+
+.lform #res_t h1{
+    margin: 0.2em;
+}
+
+footer{
+    min-width: 100%;
+    background: var(--primary);
+    min-height: 4rem;
+}

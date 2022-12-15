@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Useful if website is in a different language-->
+    <head> 
+        <link rel="icon" type="image/x-icon" href="images/pc.ico">
+        <title>
+            Revision + Cheat_Sheet 
+        </title>
+    </head>
+
+    <body>
+        <h1> The Basics of HTML </h1>
+        <!--This is a comment -->
+        <p title="This is a paragraph">In these pages I cover some common html elements.</p>
+        <hr> <!-- A horizontal line-->
+        <h2>Empty Tags</h2>
+        <p>Tags that do not require an end tag e.g. the break <br> tag.</p>
+        <h2>Anchor Tag</h2>
+        <a href = "https://www.google.com" target = "_blank">Link to external websites</a>
+        <!--
+            The target attribute sets whether the link will be opened in a new tab/window
+            or replace the current page.
+            use _blank for external websites
+        -->
+        <hr>
+        <h3>Images</h3>
+        <img src = "images/mountain.png" width="150" height="90">
+        <p style="color:#3a8df2"> <!-- It is better to use CSS for attributes-->
+            We can refer to the image from an absolute path (if external) 
+            otherwise use relative path.
+        </p>
+        <hr>
+        <h2>A Poem</h2>
+        <pre>
+            My Bonnie lies over the ocean.
+          
+            My Bonnie lies over the sea.
+          
+            My Bonnie lies over the ocean.
+
+            Oh, bring back my Bonnie to me.
+        </pre>
+        <!--Preserves spaces and line breaks,pre == preformatted text-->
+        <hr>
+        <h2>Formatting</h2>
+        <p><del>Generally CSS should be used but</del> using style attribute a lot of 
+           basic formatting could be achieved.Also using tags such as 
+           <strong> strong </strong> and <em> em </em> also helps.
+           Here is a list of all such formatting elements.
+           <ul>
+                    <li> strong - Important[Bold] text</li>
+                    <li> em - Emphasized text </li>
+                    <li> mark - Marked text</li>
+                    <li> small - Smaller text</li>
+                    <li> del - Deleted text</li>
+                    <li> ins  - Inserted text</li>
+                    <li> sub - Subscript text</li>
+                    <li> sup - Superscript text</li>        
+           </ul>
+        </p>
+    </body>
+
+
+</html>

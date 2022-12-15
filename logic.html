@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Introduction to Logic</title>
+        <meta name = "viewport" content="width = device-width,initial-scale=1.0">
+        <link rel="icon" type="image/x-png" href="/images/logic_logo.png">
+        <link rel = "stylesheet" href="style_logic.css">
+        <link rel = "stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <header>
+            <div class = "logo"><a href = "Set_Theory.html"></a></div>
+            <a href="#">Introduction to Mathematical Logic</a>
+            <h2 id ="name">Sentential Logic</h2>
+            <div class = "navbar">
+                    <h3>Navigate <i class="bi bi-chevron-down"></i>
+                    
+                    <div class = dropdown>
+                        <ul>
+                            <li><a href = "#one">Sentential Logic</a></li>
+                            <li><a href = "#two">Predicate Logic</a></li>
+                            <li><a href = "#num3">Appendix</a></li>
+                        </ul>
+                    </div>
+                </h3>
+                </div>
+        </header>
+        <div class = "home-content">
+            <h1>Mathematical Logic</h1>
+        <h3 class = "p1">Mathematical logic is the set of logical theories elaborated in the course of the
+           19<sup>th</sup> century with the aid of an artificial notation and a rigorously deductive method.It serves
+        as the basis on which we develop the rest of mathematics</h3>
+        <h3 class ="p2">Mathematical logic reflects the confluence of two traditions:<br><br>
+            
+                &emsp;&emsp; &emsp;  I. &nbsp;Formal philosophical logic <br>
+                &emsp;&emsp; &emsp;  II. Mathematics
+        </h3>
+           <img src = "images/george-boole.webp">
+           <h3 class = "p3">Since its inception, 
+            mathematical logic has both contributed to and has been motivated by the 
+            study of foundations of mathematics. </h3>
+            <div id ="one"></div>
+        </div>
+        <!--First Section-->
+        <div class = "topic_1">
+            <div class = "title" id = "num1">
+                <h1>Sentential Logic</h1>
+            </div>
+            <div class ="content">
+                <div class = box>
+                   <h2>Premise 1: P or Q <br>
+                    Premise 2: not Q <br>
+                    Conclusion: P
+                   </h2>
+                </div>
+                <h2 class = "p1">
+                    It deals with propositions (which can be True or False) 
+                    and relations between propositions, including the construction 
+                    of arguments based on them.
+                   </h2>
+                <div class = "ex">
+                    <h3>Examples:<br>1.<br>
+                        Premise 1 : If it's raining then it's cloudy.<br>
+                        Premise 2 : It's raining.<br></h3>
+                        <div class = "subex"><h3>Conclusion: </h3>
+                        <div class = "subex_box" id ="ex_drop_1" 
+                            ondrop="drop_ex(event,this)" ondragover="allowDrop(event)"></div>
+                            <i class="bi bi-check2 hide ch" id="check_1"></i>
+                            <i class="bi bi-x-lg hide ch" id = "cross_1"></i>
+                        </div>
+                        <h3><br>2.<br>
+                        Premise 1 : It will either rain or snow tomorrow.<br>
+                        Premise 2 : It's too warm for snow.<br></h3>
+                        <div class = "subex"><h3>Conclusion: </h3>
+                            <div class = "subex_box" id ="ex_drop_2" 
+                                ondrop="drop_ex(event,this)" ondragover="allowDrop(event)"></div>
+                                <i class="bi bi-check2 hide ch" id="check_2"></i>
+                                <i class="bi bi-x-lg hide ch" id = "cross_2"></i>
+                        </div>    
+                </div>
+                <div class ="b2" ondrop="drop(event,this)" ondragover="allowDrop(event)">
+                    <p>Drag and drop the correct conclusions</p>
+                    <h3 id = "drag_cloud" draggable="true" ondragstart="drag(event)">
+                        It's Cloudy</h3>
+                    <h3 id = "drag_rain" draggable="true" ondragstart="drag(event)"> 
+                        It will rain</h3>
+                        <h3 id = "drag_3" draggable="true" ondragstart="drag(event)"> 
+                            It's dark outside</h3>
+                        <h3 id = "drag_4" draggable="true" ondragstart="drag(event)"> 
+                            It's rainy season</h3>
+                        <h3 id = "drag_4" draggable="true" ondragstart="drag(event)"> 
+                            It's cold outside</h3>
+                </div>
+            </div>   
+        </div>
+        <div class = "topic_2">
+            <h2 class ="mid">It is the form, and not the subject matter, that makes arguments valid.</h2>
+            <div class="topic_2_name">
+                <img src = "./images/chevron-double-right.svg">
+                <h2>Compound propositions are formed by connecting propositions by logical connectives. </h2>
+            </div>
+            <div class="game_1">
+                <span id = "span_1">Drag and drop the names to respective slots</span>
+                <div class="col1">
+                    <p>$$\lor$$</p>
+                    <p>$$\land$$</p>
+                    <p>$$\lnot$$</p>
+                    <p>$$\Rightarrow$$</p>
+                    <p>$$\iff$$</p>
+                </div>
+                <div class="col2" id="game_col2" ondrop="drop(event,this)" ondragover="allowDrop(event)">
+                    <h3 id = "drag_op2" draggable="true" ondragstart="drag(event)">Conjunction[AND]</h3>
+                    <h3 id = "drag_op1" draggable="true" ondragstart="drag(event)">Disjunction[OR]</h3>
+                    <h3 id = "drag_op5" draggable="true" ondragstart="drag(event)">Biconditional[IFF]</h3>
+                    <h3 id = "drag_op3" draggable="true" ondragstart="drag(event)">Negation[NOT]</h3>
+                    <h3 id = "drag_op4" draggable="true" ondragstart="drag(event)">Conditional[IMPLIES]</h3>
+                </div>
+                <div class="col3">
+                    <div class="box" id ="game1_drop1" ondrop="drop_ex(event,this)" ondragover="allowDrop(event)"></div>
+                    <div class="box" id ="game1_drop2" ondrop="drop_ex(event,this)" ondragover="allowDrop(event)"></div>
+                    <div class="box" id ="game1_drop3" ondrop="drop_ex(event,this)" ondragover="allowDrop(event)"></div>
+                    <div class="box" id ="game1_drop4" ondrop="drop_ex(event,this)" ondragover="allowDrop(event)"></div>
+                    <div class="box" id ="game1_drop5" ondrop="drop_ex(event,this)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="col4">
+                    <div id ="col41"><i class="bi bi-check2 hide ch_1" id="check_3"></i>
+                        <i class="bi bi-x-lg hide ch_1" id = "cross_3"></i></div>
+                    <div id ="col42"><i class="bi bi-check2 hide ch_1" id="check_4"></i>
+                        <i class="bi bi-x-lg hide ch_1" id = "cross_4"></i></div>
+                    <div id ="col43"><i class="bi bi-check2 hide ch_1" id="check_5"></i>
+                        <i class="bi bi-x-lg hide ch_1" id = "cross_5"></i></div>
+                    <div id ="col44"><i class="bi bi-check2 hide ch_1" id="check_6"></i>
+                        <i class="bi bi-x-lg hide ch_1" id = "cross_6"></i></div>
+                    <div id ="col45"><i class="bi bi-check2 hide ch_1" id="check_7"></i>
+                        <i class="bi bi-x-lg hide ch_1" id = "cross_7"></i></div>  
+                </div>
+            </div>
+        </div>
+        <div class ="topic_3">
+            <div class="l_ex">
+                <h2>Let us analyze the logical forms of the following statements:</h2><br>
+                <h3>
+                    <ul>
+                        <p class = "num">1.</p><li> <strong>Either</strong> <div class = enclose>John went to the store</div>
+                        <strong>or</strong> <div class="enclose">we're out of eggs</div></li>
+                        <div class ="arrow"> \(\rightarrow\)</div> <p class="enclose res"> P \(\Rightarrow\) Q</p>
+                        <p class = "num">2.</p><li><div class ="enclose">Joe is going to leave home</div>
+                        <strong>and not</strong><div class="enclose">come back</div></li>
+                        <p class ="arrow"> \(\rightarrow\)</p> <p class="enclose res">P \(\land\) (\(\lnot \)Q)</p>
+                        <p class = "num l">3.</p><li><strong>Either</strong><div class="enclose">Bill is at work</div>
+                        <strong>and</strong><div class="enclose">Jane&nbsp;<strong>isn't</strong></div>
+                        <strong>or</strong><div class="enclose">Jane is at work</div><strong>and</strong>
+                        <div class="enclose">Bill&nbsp;<strong>isn't</strong></div></li>
+                        <p class ="arrow"> \(\rightarrow\)</p> 
+                        <p class="enclose res">[P \(\land\) (\(\lnot \)Q)]&nbsp;\(\lor\)&nbsp;[Q \(\land\) (\(\lnot \)P)]</p>
+                    </ul>
+                </h3>
+            </div>
+            <h3 class ="form">
+                <ul>
+                    <li>
+                        It is important to keep in mind that these symbols \(\lnot,\land \)and \(\lnot\) <strong>don't really
+                        correspond</strong> to all uses of the words and, or, and not in English.</li>
+                    <li>
+                        The symbols \(\lnot\) and \(\land\) can only be used between two statements, to form their 
+                        conjunction or disjunction, and the symbol ¬ can only be used before a statement, 
+                        to negate it. <br></li>
+                    <li>This means that certain strings of letters and symbols are <strong>simply meaningless.</strong></li>
+                    <li>
+                        For example,“Grammatical” expressions, such as those shown above are sometimes called 
+                        <strong>well-formed formulas</strong> or just formulas.</li>
+                    <li>
+                        P \(\lnot \land\) Q , P \(\land \lnot\) Q, and P\(\lnot\)Q are all “ungrammatical” 
+                        expressions in the language of logic.</li>
+                </ul>
+            </h3>
+        </div>
+        <div class = "truth_table">
+            <div class="table_box">
+            <p class = "bl"> Truth Table:&nbsp;\(\lor\)&nbsp;[OR]</p>
+               <div id="and"> 
+                <p class = "hline">P</p><p class = "hline">Q</p><p class = "hline">P \(\lor\) Q</p>
+                <p>T</p><p>T</p><p>T</p>
+                <p>T</p><p>F</p><p>T</p>
+                <p>F</p><p>T</p><p>T</p>
+                <p>F</p><p>F</p><p>F</p>
+                </div> 
+            <p class = "bl"> Truth Table:&nbsp;\(\lnot\)&nbsp;[NOT]</p>
+               <div id="not"> 
+                <p class = "hline">P</p><p class = "hline">\(\lnot\) P</p>
+                <p>T</p><p>F</p>
+                <p>F</p><p>T</p>
+               </div> 
+            </div>
+            <h3 id = "p1">When we evaluate the truth or falsity of a statement, 
+                          we assign to it one of the labels true(T) or false(F), and this 
+                          label is called its <strong>Truth value.</strong><br><br>
+                          We can summarize all the possibilities with the table shown.<br><br>
+                          This is called a <strong>Truth table</strong></h3>
+            <h3 id = "p2">Truth tables can be used to verify the validity of arguments.<br><br>
+                          We see that the only row of the table in which both premises come out true is row three, 
+                          and in this row the conclusion is also true.<br><br> 
+                          Thus, the truth table confirms that <strong>if the premises are all true, 
+                          the conclusion must also be true</strong>,so the argument is valid.</h3>
+            <div id = "table_box2">
+                <p id="premise">Premises</p>
+                <p id="conc">Conclusion</p>
+                <p>P</p><p>Q</p><p>P \(\lor\) Q</p><p>\(\lnot\) Q</p><p>P</p>
+                <div class="hl"></div><div class="hl"></div><div class="hl"></div><div class="hl"></div><div class="hl"></div>
+                <p>T</p><p>T</p><p>T</p><p>F</p><p>T</p>
+                <p>T</p><p>F</p><p>T</p><p>T</p><p>T</p>
+                <p>F</p><p>T</p><p>T</p><p>F</p><p>F</p>
+                <p>F</p><p>F</p><p>F</p><p>T</p><p>F</p>
+            </div>
+            <a href ="./logic_calculator.html"><div id = "TTbtn">Validity Checker</div></a>
+        </div>
+        <div class="laws">
+            <div id = "wrap1">
+            <div class="laws_name">
+                <img src = "./images/chevron-double-right.svg">
+                <h2>There are some rules we take as axioms called laws</h2>
+            </div>
+            <h2 class ="title">In analyzing deductive arguments and the statements that occur in them it
+                is helpful to be familiar with a number of equivalences that come up often.</h2>
+            </div>
+            <div id = "wrap2">
+            <div class = "law_box"id ="demorgan">
+                <h2>DeMorgan's laws:</h2>
+               <ul> <li>\(\lnot\)(P \(\land\) Q) is equivalent to (\(\lnot\)P) \(\lor\) (\(\lnot\)Q)</li>
+                    <li>\(\lnot\)(P \(\lor\) Q) is equivalent to (\(\lnot\)P) \(\land\) (\(\lnot\)Q)</li></ul>
+                </div>
+            <div class = "law_box"id ="comm">    
+                <h2>Commutative laws:</h2>
+                <ul> <li>P \(\land\) Q is equivalent to Q \(\land\) P</li> 
+                     <li>P \(\lor\) Q is equivalent to Q \(\lor\) P</li> </ul>
+            </div>
+            <div class = "law_box"id ="assc">    
+                <h2>Associative laws:</h2>
+                <ul> <li> P \(\land\) (Q \(\land\) R) is equivalent to (P \(\land\) Q) \(\land\) R </li> 
+                     <li> P \(\lor\) (Q \(\lor\) R) is equivalent to (P \(\lor\) Q) \(\lor\) R.</li> </ul>
+            </div>
+            <div class = "law_box"id ="idem">    
+                <h2>Idempotent laws:</h2>
+                <ul> <li>P \(\land\) P is equivalent to P
+                     <li>P \(\lor\) P is equivalent to P </li></ul>
+            </div>
+            <div class = "law_box"id ="dist">    
+                <h2>Distributive laws:</h2>
+                <ul><li>P \(\land\) (Q \(\lor\) R) is equivalent to (P \(\land\) Q) \(\lor\) (P \(\land\) R) </li> 
+                    <li>P \(\lor\) (Q \(\land\) R) is equivalent to (P \(\lor\) Q) \(\land\) (P \(\lor\) R)</li> </ul>
+            </div>
+            <div class = "law_box"id ="abs">    
+                <h2>Absorption laws:</h2>
+                <ul><li>P \(\lor\) (P \(\land\) Q) is equivalent to P</li> 
+                    <li>P \(\land\) (P \(\lor\) Q) is equivalent to P</li> </ul>
+            </div>
+            <div class = "law_box"id ="dnl">    
+                <h2>Double Negation law:</h2>
+                <ul><li>\(\lnot\)\(\lnot\)P is equivalent to P</li> </ul>
+            </div>
+        </div>
+            <div id = "taut_box">
+                Formulas that are always true, such as P \(\lor\) (\(\lnot\)P), are called <strong>Tautologies</strong> <br> 
+                Similarly, formulas that are always false are called <strong>Contradictions</strong>
+            </div>
+        </div>    
+        <div class = "cons">
+            <div class="cons_name">
+                <img src = "./images/chevron-double-right.svg">
+                <h2>Conditionals and Bi-Conditionals</h2>
+            </div>
+            <div class="cons_box">
+                 <h2>P</h2> <h2>\(\Rightarrow\)</h2> <h2>Q</h2>
+                 <p>antecedent</p> <h2>&nbsp;</h2> <p>consequent</p>
+                 <p id="tg">"If P then Q"</p>
+            </div>
+            <h3 class = "form" id="conv">
+                <ul><li>The formulas P \(\Rightarrow\) Q and Q \(\Rightarrow\) P do not mean the same thing.
+                        This can be verified using a truth table</li>
+                    <li>The formula Q \(\Rightarrow\) P is called the <strong>converse</strong> of P \(\Rightarrow\) Q.
+                        <strong>Never confuse</strong> a conditional statement with its converse</li>
+                    
+                    <li>The <strong>contrapositive</strong> of P \(\Rightarrow\) Q is the formula (\(\lnot\)Q) 
+                        \(\Rightarrow\) (\(\lnot\)P), and it is equivalent to P → Q </li>
+                    </ul>     
+            </h3>
+            <div class = "law_box"id ="implies">    
+                <h2>Conditional laws:</h2>
+                <ul> <li>P \(\Rightarrow\) Q is equivalent to (\(\lnot\)P) \(\lor\) Q</li> 
+                     <li>P \(\Rightarrow\) Q is equivalent to \(\lnot\)(P \(\land\) (\(\lnot\)Q))</li></ul>
+            </div>
+            <div class = "law_box"id ="contra">    
+                <h2>Contrapositive law:</h2>
+                <ul> <li>P \(\Rightarrow\) Q is equivalent to (\(\lnot\)Q) \(\Rightarrow\) (\(\lnot\)P)</li>
+                </ul>
+            </div> 
+            <div class="table_box">
+                <p class = "bl"> Truth Table:&nbsp;\(\Rightarrow\)&nbsp;[IMPLIES]</p>
+                   <div id="cond"> 
+                    <p class = "hline">P</p><p class = "hline">Q</p><p class = "hline">P \(\Rightarrow\) Q</p>
+                    <p>T</p><p>T</p><p>T</p>
+                    <p>T</p><p>F</p><p>F</p>
+                    <p>F</p><p>T</p><p>T</p>
+                    <p>F</p><p>F</p><p>T</p>
+                    </div>
+                    <div id="cond2"> 
+                        <p class = "hline">Q</p><p class = "hline">P</p><p class = "hline">Q \(\Rightarrow\) P</p>
+                        <p>T</p><p>T</p><p>T</p>
+                        <p>F</p><p>T</p><p>T</p>
+                        <p>T</p><p>F</p><p>F</p>
+                        <p>F</p><p>F</p><p>T</p>
+                    </div>
+                    
+            </div>
+            <h3  id="bicon"> <ul><li> Often in mathematics we want to say that both P \(\Rightarrow\) Q and 
+                Q \(\Rightarrow\) P are true, therefore we introduce a new connective symbol,<br>\(\iff\)<br> to express this </li>
+                <li>P \(\iff\) Q is just an abbreviation for the formula (P \(\Rightarrow\) Q) ∧ (Q \(\Rightarrow\) P) </li> 
+                <li>A statement of the form P \(\iff\) Q is called a <strong>Biconditional</strong> statement, because it represents
+                two conditional statements</li></ul></h3> 
+            <div class="table_box" id = "bi">
+                <p class = "bl"> Truth Table:&nbsp;\(\iff\)&nbsp;[IFF]</p>
+                    <div id="bicond"> 
+                    <p class = "hline">P</p><p class = "hline">Q</p><p class = "hline">P \(\iff\) Q</p>
+                        <p>T</p><p>T</p><p>T</p>
+                        <p>T</p><p>F</p><p>F</p>
+                        <p>F</p><p>T</p><p>F</p>
+                        <p>F</p><p>F</p><p>T</p>
+                    </div>
+            </div>
+            <h3 class = "form" id = "l_con">
+                <ul><li>Because Q \(\Rightarrow\) P can be written “P if Q” and P \(\Rightarrow\) Q can be written “P only
+                    if Q”, P \(\iff\) Q means “P if Q and P only if Q ” and this is often written <strong>“P if
+                        and only if Q”</strong></li>
+                    <li>The phrase “if and only if” occurs so often in mathematics that there is a 
+                        common abbreviation for it, <strong>iff</strong> Thus, P \(\iff\) Q is usually written “P iff Q” </li>
+                    <li>Another statement that means P \(\iff\) Q is <strong>“P is a necessary and sufficient
+                        condition for Q”</strong></li></ul></h3>
+        </div>
+        <!--Second Section-->
+        <div class = "one_l">
+            <div class = "title" id = "num2">
+                <h1>Predicate Logic</h1>
+                <div id="two"></div>
+            </div>
+            <div id ="pred_1">
+            <h3 class ="h3_desc">
+                Predicate logic uses <strong>quantified variables</strong> over non-logical objects, 
+                and allows the use of sentences(propositions) that contain <strong>variables</strong>.<br><br>
+                This distinguishes it from propositional logic, which does not use quantifiers or relations. 
+                In this sense, propositional logic is the foundation of predicate logic.
+            </h3>
+            <div id ="socrates">
+                <ul>
+                    <li>P : Socrates is a man </li>
+                    <li>\(P(x)\) : x is a man </li>
+                    <li> There exists x such that \(P(x)\)</li>
+                    <li><light>(that x is socrates)</light></li>
+                </ul>
+            </div>
+            </div>
+            <div id = "variables">
+                <div class="var_name">
+                <h2><i class="bi bi-chevron-double-right"></i>
+                Variables</h2>
+            </div>
+        <h3 class = "form" id ="v1">  
+            <ul>
+                <li>In mathematical reasoning it is often necessary to make statements about objects
+                that are represented by letters called <strong>variables.</strong></li>
+                <li>We have used a single letter such as P to represent these statements.Now we alter the
+                notation slightly and write \(P(x)\), to stress that this is a statement about x.</li>
+                <li>The latter notation makes it easy to talk about substituting some value for
+                x in the statement.</li>
+            </ul>
+        </h3>
+         </div>
+         <div id = "quantifier">
+            <h2><i class="bi bi-chevron-double-right"></i> Quantifers </h2>
+            <div class = "content">
+            <h3 class = "h3_desc">In predicate logic, A quantifier is an operator that 
+                specifies how many individuals in the <strong>domain of discourse</strong> 
+                satisfy the given formula.<br><br>
+            A domain of discourse is the the collection of entities over which our variable may range<br><br>
+        The two Quantifiers most used are :<br><br><ol>
+            <li>&emsp;&emsp; &emsp;I. &nbsp;Universal Quantifier : \(\forall\)</li>
+            <li>&emsp;&emsp; &emsp;II. Existential Quantifier : \(\exists\)</li>
+        </ol></h3>
+                <div class = "box">\(\forall x P(x)\)<br><br>
+                    \(\exists x P(x)\)
+                </div>
+            </div>
+        </div>
+        <div id = "pa_ex">
+            <h2>Let us analyze the following statements: </h2>
+            <h3 class = "bh"><strong>1.</strong> All parents are married</h3>
+            <div class = "eqn">
+            \(\forall x (\)<div class ="sub"> <p class="ab" >\(\exists y P(x, y)\)</p>
+                             <p class = "blw">x is a parent of y</p>
+            </div>  
+            &emsp;\(\Rightarrow\)&emsp;
+            <div class ="sub"> <p class="ab" >\(\exists yM(x, y)\) </p>
+                                <p class = "blw">x is married to y</p>
+            </div>  \()\)</div>
+            <h3>We can use y here both times since we mean different people while using it.</h3>
+                <h3>But for perfect clarity you can use \(M(x,z)\) as well </h3>
+            <div class ="hline"></div>
+                <h3 class = "bh"><strong>2.</strong> Order of operators matter:</h3>
+                <ul>
+                <li>I. &nbsp;\(\exists y \forall x(x + y = 5)\)</li>
+                <li>II. \(\forall x \exists y(x + y = 5)\)</li>
+            </ul>
+                <h3>In the first statement we say that there is a number which is always equal to 5-x no matter which x (this is false)</h3>
+                <h3>In the second statemnet we say that for all numbers x there is a y such that x + y = 5 (which is true)</h3>
+            </div>    
+            <div class = "qlaws">
+            <div class = "law_box q"id ="quant">
+                <h2>Quantifier Negation laws:</h2>
+               <ul> <li>\(\lnot \exists x P(x) \iff \forall x \lnot P(x)\)</li>
+                    <li>\(\forall x P(x) \iff \exists x \lnot P(x)\)</li></ul>
+                </div>
+                <div class = "law_box q"id ="quant2">
+                    <h2>Quantifier Distributive laws:</h2>
+                   <ul> <li>\( \forall x(E(x) \land T (x)) \iff \forall xE(x) \land \forall xT(x)\)</li>
+                    <li>\( \forall x(E(x) \lor T (x)) \iff \forall xE(x) \lor \forall xT(x)\)</li>
+                        <li>\(\exists x(E(x) \lor T (x)) \iff \exists xE(x) \lor \exists xT(x)\)</li></ul>
+                    </div>
+                </div>
+        <div id = "unique">The phrase <strong>Exactly once</strong> occurs so often in
+            mathematics that there is a special notation for it.<br><br>\(\exists! x P(x)\)
+            </div>        
+            <div id ="conclusion">It is a remarkable fact that the
+                structure of all mathematical statements can be understood using these symbols,
+                and all mathematical reasoning can be analyzed in terms of the proper use of
+                these symbols.</div>
+                </div>
+        <!--Third Section-->
+        <div id="num3">
+                    <h2>Appendix</h2>
+                    <h3 id = "high"><strong>1. Higher-Order Logics: </strong><br><br>
+                        Higher-order logic is a logic that admits so-called higher-order functions, 
+                        which are functions that can have functions as arguments or return a function as a result.
+                        It is explored more in <em>type theory</em>
+                    </h3>
+                    <h3 id ="proof">
+                        <p>2.Proof Strategies <light>(from Velleman)</light></p>
+                        <ke>To prove a goal of the form:</ke>
+                        <ke>To use a given of the form:</ke>
+                        <div class = "pfcard">
+                             \(\lnot P\)<br>
+                        1. Re-express as a positive statement.<br>
+                        2. Use proof by contradiction; that is, assume that P is true and try to reach a contradiction.
+                        </div>
+                        <div class = "pfcard">
+                            \(\lnot P\)<br>
+                            1. Reexpress as a positive statement.<br>
+                            2. In a proof by contradiction, you can reach a contradiction by proving P.
+                        </div>
+                        <div class = "pfcard">
+                            \(P \Rightarrow Q\)<br>
+                            1. Assume P is true and prove Q.<br>
+                            2. Prove the contrapositive; that is, assume that Q is false and prove that
+                            P is false.
+                        </div>
+                        <div class = "pfcard">
+                            \(P \Rightarrow Q\)<br>
+                            1. If you are also given P, or you can prove that P is true, then you can
+                            conclude that Q is true.<br>
+                            2. Use the contrapositive.
+                        </div>
+                        <div class = "pfcard">
+                            \(P \land Q\)<br>
+                            Prove P and Q separately. In other words, treat this as two separate goals:
+                            P, and Q.
+                        </div>
+                        <div class = "pfcard">
+                            \(P \land Q\)<br>
+                            Treat this as two givens: P, and Q.
+                        </div>
+                        <div class = "pfcard">
+                            \(P \lor Q\)<br>
+                            1. Assume P is false and prove Q, or assume Q is false and prove P.<br>
+                            2. Use proof by cases. In each case, either prove P or prove Q.
+                        </div>
+                        <div class = "pfcard">
+                            \(P \lor Q\)<br>
+                            1. Use proof by cases. In case 1 assume that P is true, and in case 2 assume
+                            that Q is true.<br>
+                            2. If you are also given that P is false, or you can prove that P is false,
+                            then you can conclude that Q is true and vice versa.
+                        </div>
+                        <div class = "pfcard">
+                            \(P \iff Q\)<br>
+                            Prove \(P \Rightarrow Q\) and \(Q \Rightarrow P\)
+                        </div>
+                        <div class = "pfcard">
+                            \(P \iff Q\)<br>
+                            Treat this as two givens: \(P \Rightarrow Q\), and \(Q \Rightarrow P\).
+                        </div>
+                        <div class = "pfcard">
+                             \( \forall x P(x) \)<br>
+                            Let y stand for an arbitrary object, and prove P(y).
+                        </div>
+                        <div class = "pfcard">
+                            \( \forall x P(x) \)<br>
+                            You can plug in any value, say a, for x, and conclude that P(a) is true.
+                        </div>
+                        <div class = "pfcard">
+                            \( \exists x P(x) \)<br>
+                            Find a value of x that makes P(x) true.<br>Prove P(x) for this value of x.
+                        </div>
+                        <div class = "pfcard">
+                            \( \exists x P(x) \)<br>
+                            Introduce a new variable, say \(x_0\), into the proof, to stand for a particular
+                            object for which \(P(x_0)\) is true.
+                        </div>
+                        <div class = "pfcard">
+                            \( \exists !x P(x) \)<br>
+                            1. Prove \( \exists x P(x) \) (existence) and \(\forall y \forall 
+                            z((P(y) \land P(z)) \Rightarrow y = z)\) (uniqueness).<br>
+                            2. Prove the equivalent statement \(\exists x(P(x) \land \forall y(P(y) \Rightarrow y = x))\).
+                        </div>
+                        <div class = "pfcard">
+                            \( \exists !x P(x) \)<br>
+                            Introduce a new variable, say \(x_0\), into the proof, to stand for a particular object
+                            for which \(P(x_0)\) is true.<br>
+                            You may also assume that ∀y(P(y) → y = x0).
+                        </div>
+                        <ke2>Proof Strategies that can be used anywhere</ke2>
+                        <div class = "pfcard">
+                            <strong>Proof by contradiction</strong><br>
+                            Assume the goal is false and derive a contradiction.
+                        </div>
+                        <div class = "pfcard">
+                            <strong>Proof by cases</strong><br> Consider several cases that are exhaustive, that is, that include
+                                all the possibilities.<br>Prove the goal in each case.
+                        </div>
+                        
+                    </h3>
+                </div>
+        <!--Fourth Section-->
+        <div id = "num4">
+            <h3>History</h3>
+            <p>There are two histories to consider:<br>
+                The history of formal logic and its methods and the history of its codification in mathematical form<br><br>
+                1. Western Logic timeline</p>
+                <div id="g1">
+                <div id = "subg1">
+                    <i class="bi bi-arrow-90deg-right out" id ="up"></i>
+                    <el id ="zeno">Zeno<elsub>Proof by Contradiction</elsub></el>
+                    <vline id ="vl1"><v1></v1><i class="bi bi-arrow-right"></i></vline>
+                <el id ="lo">Logos</el>
+                <i class="bi bi-arrow-right out"></i>
+                <el>Plato</el>
+                <i class="bi bi-arrow-right out"></i>
+                <el>Aristotle<elsub>Syllogism</elsub></el>
+                <i class="bi bi-arrow-90deg-left" id = "down"></i>
+                <el>Stoics
+                    <elsub>Conditionals&nbsp;Propositional Logic</elsub>
+                </el>    
+            </div>
+            <div id = "subg2">
+                <el>Suppositions</el>
+                <el>Sycatagoremata</el>
+                <el>Consequences</el>
+                <el>Principle of Explosion</el>
+                <vline id ="vl2"><v1></v1><i class="bi bi-arrow-right"></i></vline>
+            </div>
+            <div id = "subg3">
+                <el>Leibniz<elsub>Embryonic</elsub></el>
+                <i class="bi bi-arrow-right out"></i>
+                <el>Boole</el>
+            </div>
+            <hbar></hbar>
+            <hbar></hbar>
+            <hbar></hbar>
+            <de>Ancient Greece</de>
+            <de>Medieval Europe</de>
+            <de>Modern Logic</de>
+        </div>
+                <p id = "math">2. Mathematical Timeline</p>
+                <div id ="g2">
+                    <div id ="subg4">
+                        <i class="bi bi-arrow-90deg-right out" id ="up"></i>
+                        <el>DeMorgan<elsub>Relations</elsub></el>
+                        <el>Peacock</el>
+                        <i class="bi bi-arrow-right out"></i>
+                        <el>Boole<elsub>Numberic Syllogism</elsub></el>
+                        <i class="bi bi-arrow-90deg-left" id = "down"></i>
+                        <el>Gregory</el>
+                        <vline id ="vl2"><v1></v1><i class="bi bi-arrow-right"></i></vline>
+                    </div>
+                    <div id="subg5">
+                        <el>Frege</el>
+                        <el>Pierce</el>
+                        <vline id ="vl2"><v1></v1><i class="bi bi-arrow-right"></i></vline>
+                    </div>
+                    <div id="subg6">
+                        <el>Russell</el>
+                        <el id="sc">Schroder</el>
+                    </div>
+                    <hbar></hbar>
+                    <hbar></hbar>
+                    <hbar></hbar>
+                    <de>Symbolic Algebra</de>
+                    <de>Mathematical Logic</de>
+                    <de>Foundations of Mathematics</de>
+                </div>
+        </div>
+        <footer></footer>
+        <scroller></scroller>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+        <script src = "./logic.js"></script>
+    </body>    
+    </html>
